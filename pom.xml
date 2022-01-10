@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>graphql-demo</artifactId>
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <groupId>org.springframework.boot</groupId>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+    <!-- Spring Dependencies -->
+    <dependency>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+
+    <!-- GraphQL Dependencies -->
+    <dependency>
+      <artifactId>graphql-spring-boot-starter</artifactId>
+      <groupId>com.graphql-java</groupId>
+      <version>${graphql.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>graphql-java-tools</artifactId>
+      <groupId>com.graphql-java</groupId>
+      <version>${graphql.java.tools.version}</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>graphiql-spring-boot-starter</artifactId>
+      <groupId>com.graphql-java</groupId>
+      <version>${graphql.version}</version>
+    </dependency>
+
+    <!-- H2 Dependencies -->
+    <dependency>
+      <artifactId>h2</artifactId>
+      <groupId>com.h2database</groupId>
+      <version>${h2.version}</version>
+    </dependency>
+
+  </dependencies>
+  <description>Demo project for Pensacola Developers GraphQL talk</description>
+  <groupId>com.pensacoladevelopers</groupId>
+  <modelVersion>4.0.0</modelVersion>
+  <name>graphql-demo</name>
+  <parent>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <groupId>org.springframework.boot</groupId>
+    <relativePath/>
+    <version>2.6.2</version> <!-- lookup parent from repository -->
+  </parent>
+  <properties>
+    <graphql.java.tools.version>5.2.4</graphql.java.tools.version>
+    <graphql.version>5.0.2</graphql.version>
+    <h2.version>2.0.204</h2.version>
+    <java.version>11</java.version>
+  </properties>
+
+  <version>0.0.1-SNAPSHOT</version>
+
+</project>
